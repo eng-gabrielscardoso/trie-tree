@@ -50,6 +50,7 @@ func main() {
 	myTrie.Insert("R")
 	myTrie.Insert("R")
 	myTrie.Insert("R")
+	myTrie.Insert("N")
 
 	f.Println("# SEARCHING FOR: TRIE")
 
@@ -104,6 +105,30 @@ func main() {
 	f.Println("# SEARCHING FOR: E (AFTER DELETION)")
 
 	keyword = "E"
+
+	result = myTrie.SearchWord(s.ToLower(keyword))
+
+	if result {
+		f.Println("I've found", keyword)
+	} else {
+		f.Println(keyword, "is not in the trie")
+	}
+
+	f.Println("# SEARCHING FOR: F (AFTER E DELETION)")
+
+	keyword = "F"
+
+	result = myTrie.SearchWord(s.ToLower(keyword))
+
+	if result {
+		f.Println("I've found", keyword)
+	} else {
+		f.Println(keyword, "is not in the trie")
+	}
+
+	f.Println("# SEARCHING FOR: N (MOST INTERNAL NODE AFTER E DELETION)")
+
+	keyword = "N"
 
 	result = myTrie.SearchWord(s.ToLower(keyword))
 
