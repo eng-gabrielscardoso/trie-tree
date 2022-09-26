@@ -4,6 +4,8 @@ This repository is a collection of codes for implementing a Trie tree using the 
 
 ## Running codes
 
+### Running with SDK
+
 1. You must have the specific version of the Golang specified in the `go.mod` file or above.
 2. You must run the codes manually (terminal), do not use VS Code extensio or shortcuts, just dirty your hand.
 ```shell
@@ -19,8 +21,3 @@ $ go build
 ## Licence
 
 This project is licensed under the [MIT licence](LICENCE.md).
-
-## Authors
-
-* [Gabriel Santos Cardoso](https://linkedin.com/in/eng-gabrielscardoso)
-* Leandro Marcos Pinheiro Souza
