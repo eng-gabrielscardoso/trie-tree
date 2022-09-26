@@ -18,7 +18,7 @@ $ go run *.go
 $ go build
 ```
 
-## Running with Docker
+### Running with Docker
 
 > Solution still under development
 
