@@ -47,4 +47,16 @@ func main() {
 	} else {
 		f.Println(keyword, "is not in the trie")
 	}
+
+	myTrie.RemoveWord("E")
+
+	keyword = "E"
+
+	result = myTrie.SearchWord(keyword)
+
+	if result {
+		f.Println("I've found", keyword)
+	} else {
+		f.Println(keyword, "is not in the trie")
+	}
 }

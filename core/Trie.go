@@ -68,9 +68,9 @@ This methods is responsible for search a word into the Trie
 @return bool - if found, return true, otherwise return false
 */
 func (t *Trie) SearchWord(word string) bool {
-	strippedWord := s.ToLower(s.ReplaceAll(word, " ", ""))
-
 	current := t.root
+
+	strippedWord := s.ToLower(s.ReplaceAll(word, " ", ""))
 
 	for i := 0; i < len(strippedWord); i++ {
 		index := strippedWord[i] - 'a'
@@ -81,4 +81,33 @@ func (t *Trie) SearchWord(word string) bool {
 	}
 
 	return true
+}
+
+/*
+This methods is responsible for delete a word from the Trie
+
+@param word: string - word to be deleted from the Trie
+
+@return bool - if deleted, return true, otherwise return false
+*/
+func (t *Trie) RemoveWord(word string) bool {
+	current := t.root
+
+	strippedWord := s.ToLower(s.ReplaceAll(word, " ", ""))
+
+	for i := 0; i < len(strippedWord); i++ {
+		index := strippedWord[i] - 'a'
+
+		if current.children[index] != nil {
+			if current.children[index].char == strippedWord {
+				current.children[index] = nil
+
+				return true
+			}
+		}
+
+		current = current.children[index]
+	}
+
+	return false
 }
