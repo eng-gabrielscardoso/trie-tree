@@ -18,6 +18,20 @@ $ go run *.go
 $ go build
 ```
 
+## Running with Docker
+
+> Solution still under development
+
+1. You must have Docker installed in your machine first than all.
+2. You have to run the following command in the root directory of the application:
+```shell
+$ sudo docker build --tag trie-tree .
+```
+3. Run the container with the following command:
+```shell
+$ sudo docker run trie-tree
+```
+
 ## Licence
 
 This project is licensed under the [MIT licence](LICENCE.md).
