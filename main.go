@@ -32,25 +32,11 @@ This function is the entrypoint of application and is responsible for initialisa
 func main() {
 	myTrie := c.NewTrie()
 
-	myTrie.Insert("R")
-	myTrie.Insert("T")
-	myTrie.Insert("R")
-	myTrie.Insert("I")
-	myTrie.Insert("E")
-	myTrie.Insert("F")
-	myTrie.Insert("G")
-	myTrie.Insert("A")
-	myTrie.Insert("R")
-	myTrie.Insert("B")
-	myTrie.Insert("R")
-	myTrie.Insert("I")
-	myTrie.Insert("R")
-	myTrie.Insert("E")
-	myTrie.Insert("L")
-	myTrie.Insert("R")
-	myTrie.Insert("R")
-	myTrie.Insert("R")
-	myTrie.Insert("N")
+	chars := []string{"R", "T", "R", "I", "E", "F", "G", "A", "R", "B", "R", "I", "E", "L", "R", "R", "E", "L", "R", "N"}
+
+	for i := 0; i < len(chars); i++ {
+		myTrie.Insert(chars[i])
+	}
 
 	f.Println("# SEARCHING FOR: TRIE")
 
