@@ -1,12 +1,12 @@
 # syntax=docker/dockerfile:experimental
 
-# Alpine is chosen for its small footprint comparet to Ubuntu
+# Alpine was chosen for its small footprint comparated to Ubuntu
 FROM golang:1.19-alpine
 
 # Define working directory /app
 WORKDIR /app
 
-# Copy necessary fil
+# Copy necessary files
 COPY go.mod .
 
 # Copy necessary files to /app
